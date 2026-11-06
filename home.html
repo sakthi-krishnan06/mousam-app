@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mausam | Weather Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app">
+
+    <aside class="sidebar">
+      <a class="brand" href="home.html">
+        <span class="brand-icon">🌦️</span>
+        <span>MAUSAM</span>
+      </a>
+
+      <p class="nav-heading">MENU</p>
+      <a class="nav-link active" href="#overview">☀️ <span>Overview</span></a>
+      <a class="nav-link" href="#hourly">🕒 <span>Hourly Forecast</span></a>
+      <a class="nav-link" href="#weekly">📅 <span>7-Day Forecast</span></a>
+      <a class="nav-link" href="#insights">✨ <span>Weather Advice</span></a>
+
+      <div class="sidebar-bottom">
+        <div class="mini-weather">
+          <span>🌤️</span>
+          <div><strong>28°C</strong><small>Partly cloudy</small></div>
+        </div>
+        <button id="themeToggle" class="theme-button">🌙 Dark mode</button>
+        <button id="logoutBtn" class="logout-button">↪ Logout</button>
+      </div>
+    </aside>
+
+    <main class="main-content" id="overview">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow" id="todayDate">YOUR WEATHER, YOUR WAY</p>
+          <h1>Good day! <span>👋</span></h1>
+          <p class="subheading">Here's what's happening with the weather.</p>
+        </div>
+        <div class="top-actions">
+          <span class="profile-avatar">🌤️</span>
+          <div>
+            <strong id="profileName">Weather Explorer</strong>
+            <small id="profileType">Personal weather</small>
+          </div>
+        </div>
+      </header>
+
+      <section class="search-row">
+        <div class="location-label">📍 <span id="cityLabel">Coimbatore, India</span></div>
+        <form id="cityForm" class="search-form">
+          <input id="cityInput" type="text" placeholder="Enter a city..." aria-label="City name">
+          <button type="submit">Search</button>
+        </form>
+      </section>
+
+      <section class="hero-weather">
+        <div class="hero-copy">
+          <span class="live-label"><span class="live-dot"></span> TODAY'S WEATHER · DEMO</span>
+          <h2 id="weatherGreeting">A lovely day to explore</h2>
+          <p id="weatherDescription">Partly cloudy skies with a chance of sunshine.</p>
+          <div class="temperature"><span id="temperature">28</span><span class="degree">°C</span></div>
+          <p class="feels-like">Feels like <strong id="feelsLike">30°C</strong></p>
+          <div class="hero-bottom">
+            <span>🌡️ High <strong>31°</strong></span>
+            <span>❄️ Low <strong>23°</strong></span>
+          </div>
+        </div>
+        <div class="hero-illustration" aria-label="Partly cloudy weather">⛅</div>
+        <div class="hero-decoration"></div>
+      </section>
+
+      <section class="section-block" id="hourly">
+        <div class="section-heading">
+          <div><h2>Hourly forecast</h2><p>Weather throughout the day</p></div>
+          <span class="section-tag">NEXT HOURS</span>
+        </div>
+        <div class="hourly-grid">
+          <div class="hour-card"><span>Now</span><span class="weather-emoji">⛅</span><strong>28°</strong><small>60%</small></div>
+          <div class="hour-card"><span>11 AM</span><span class="weather-emoji">☀️</span><strong>29°</strong><small>10%</small></div>
+          <div class="hour-card"><span>12 PM</span><span class="weather-emoji">🌤️</span><strong>30°</strong><small>15%</small></div>
+          <div class="hour-card"><span>1 PM</span><span class="weather-emoji">🌦️</span><strong>29°</strong><small>35%</small></div>
+          <div class="hour-card"><span>2 PM</span><span class="weather-emoji">🌧️</span><strong>27°</strong><small>60%</small></div>
+          <div class="hour-card"><span>3 PM</span><span class="weather-emoji">🌦️</span><strong>26°</strong><small>45%</small></div>
+        </div>
+        <p class="forecast-note">Rain chance shown as a percentage · Example data</p>
+      </section>
+
+      <section class="section-block" id="insights">
+        <div class="section-heading">
+          <div><h2>Today's weather insights</h2><p>Know your conditions at a glance</p></div>
+        </div>
+        <div class="metrics-grid">
+          <article class="metric-card"><div class="metric-top"><span>💧</span><small>HUMIDITY</small></div><strong>68<span>%</span></strong><p>Moderate moisture</p><div class="metric-bar"><span style="width:68%"></span></div></article>
+          <article class="metric-card"><div class="metric-top"><span>💨</span><small>WIND SPEED</small></div><strong>12 <span>km/h</span></strong><p>Gentle breeze</p><div class="metric-bar"><span style="width:35%"></span></div></article>
+          <article class="metric-card"><div class="metric-top"><span>☀️</span><small>UV INDEX</small></div><strong>5 <span>/ 11</span></strong><p>Moderate — use protection</p><div class="metric-bar"><span style="width:45%"></span></div></article>
+          <article class="metric-card"><div class="metric-top"><span>🌧️</span><small>RAIN CHANCE</small></div><strong>60<span>%</span></strong><p>Consider carrying an umbrella</p><div class="metric-bar"><span style="width:60%"></span></div></article>
+        </div>
+      </section>
+
+      <section class="section-block" id="weekly">
+        <div class="section-heading">
+          <div><h2>7-day forecast</h2><p>Plan the week ahead</p></div>
+          <span class="section-tag">THIS WEEK</span>
+        </div>
+        <div class="weekly-card">
+          <div class="week-row"><span>Today</span><span>⛅</span><span>Partly cloudy</span><strong>31° / 23°</strong></div>
+          <div class="week-row"><span>Tomorrow</span><span>🌦️</span><span>Light rain</span><strong>29° / 22°</strong></div>
+          <div class="week-row"><span>Wednesday</span><span>☀️</span><span>Sunny</span><strong>32° / 23°</strong></div>
+          <div class="week-row"><span>Thursday</span><span>🌧️</span><span>Rain showers</span><strong>28° / 22°</strong></div>
+          <div class="week-row"><span>Friday</span><span>🌤️</span><span>Mostly sunny</span><strong>30° / 23°</strong></div>
+          <div class="week-row"><span>Saturday</span><span>⛅</span><span>Partly cloudy</span><strong>31° / 24°</strong></div>
+          <div class="week-row"><span>Sunday</span><span>☀️</span><span>Sunny</span><strong>32° / 24°</strong></div>
+        </div>
+      </section>
+
+      <section class="advice-card">
+        <div class="advice-icon">✨</div>
+        <div>
+          <p class="eyebrow">PERSONALIZED FOR YOU</p>
+          <h2 id="adviceTitle">Make the most of your day</h2>
+          <p id="adviceText">Keep an umbrella handy if rain is expected, and stay hydrated.</p>
+        </div>
+      </section>
+
+      <footer>© 2026 Mausam Weather App · Your weather, your way.</footer>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
